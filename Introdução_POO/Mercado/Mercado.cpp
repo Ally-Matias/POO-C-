@@ -28,7 +28,7 @@ void Mercado::imprimir(){
     cout << "- Lucro: " << lucro << "\n";
 }
 
-void Mercado::porte(int x){
+void Mercado::porte(int x){ 
     if(x < 50){
         cout << "Ela é de pequeno porte!" << "\n";
     }else if(x >= 50 && x < 100){
