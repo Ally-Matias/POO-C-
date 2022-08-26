@@ -1,22 +1,23 @@
 #include <iostream>
-#include "Mercado.cpp"
+#include "Mercado2.cpp"
 
 int main(){
-    Mercado *frigorifico=new Mercado("frigorifico", "a", 2, 40);
+    Mercado *frigorifico = new Mercado("frigorifico", "a", 1, 40);
     frigorifico->imprimir();
-    frigorifico->porte(40);
+    frigorifico->porte();
 
     cout << "--------------------------" << "\n";
 
-    Mercado *fruteira=new Mercado("fruteira", "b", 2, 60);
+    Mercado *fruteira = new Mercado("fruteira", "b", 2, 60);
     fruteira->imprimir();
-    fruteira->porte(60);
+    fruteira->porte();
 
     cout << "--------------------------" << "\n";
 
-    Mercado *atacadao=new Mercado("atacadao", "c", 2, 100);
+    Mercado *atacadao = new Mercado("atacadao", "c", 3, 100);
     atacadao->imprimir();
-    atacadao->porte(100);
+    atacadao->porte();
 
     return 0;
 }
+
