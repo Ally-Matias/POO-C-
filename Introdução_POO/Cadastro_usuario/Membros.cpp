@@ -1,27 +1,30 @@
+//biblioteca
 #include <iostream>
 
 using namespace std;
 
-class Usuario{
+//classe
+class Membros{
     private:
         string nome;
         string ocupacao;
         string email;
         string palavraChave;
         int idade;
-        string sexo;  // coloquei string temporaria, o certo é char
+        char sexo[2];
     public:
-        Usuario(string nome, string ocupacao, string email, string palavraChave, int idade, string sx){
+        //construtor
+        Membros(string nome, string ocupacao, string email, string palavraChave, int idade, char sx){
             this->nome = nome;
             this->ocupacao = ocupacao;
             this->email = email;
             this->palavraChave = palavraChave;
             this->idade = idade;
-            sexo = sx;
+            sexo[2] = sx;
         }
 
         void imprimir();
-
+    
         string getNome();
         void setNome(string n);
 
@@ -37,11 +40,11 @@ class Usuario{
         int getIdade();
         void setIdade(int i);
 
-        string getSexo();
-        void setSexo(string sx);
+        char getSexo();
+        void setSexo(char sx);
 };
 
-void Usuario::imprimir(){
+void Membros::imprimir(){
     cout << "- Nome: " << getNome() << "\n";
     cout << "- Ocupacao: " << getOcupacao() << "\n";
     cout << "- Email: " << getEmail() << "\n";
@@ -50,55 +53,70 @@ void Usuario::imprimir(){
     cout << "- Sexo: " << getSexo() << "\n";
 }
 
-string Usuario::getNome(){
+//encapsulamento(gets e sets)
+
+string Membros::getNome(){
     return nome;
 }
-void Usuario::setNome(string n){
+void Membros::setNome(string n){
     nome=n;
 }
 
-string Usuario::getOcupacao(){
+string Membros::getOcupacao(){
     return ocupacao;
 }
 
-void Usuario::setOcupacao(string o){
+void Membros::setOcupacao(string o){
     ocupacao=o;
 }
 
-string Usuario::getEmail(){
+string Membros::getEmail(){
     return email;
 }
 
-void Usuario::setEmail(string e){
+void Membros::setEmail(string e){
     email=e;
 }
 
-string Usuario::getPalavraChave(){
+string Membros::getPalavraChave(){
     return palavraChave;
 }
 
-void Usuario::setPalavraChave(string p){
+void Membros::setPalavraChave(string p){
     palavraChave=p;
 }
-int Usuario::getIdade(){
+int Membros::getIdade(){
     return idade;
 }
 
-void Usuario::setIdade(int i){
+void Membros::setIdade(int i){
     palavraChave=i;
 }
 
-string Usuario::getSexo(){
-    return sexo;
+char Membros::getSexo(){
+    return sexo[2];
 }
 
-void Usuario::setSexo(string sx){
-    sexo=sx;
+void Membros::setSexo(char sx){
+    sexo[2]=sx;
 }
+
+//main
 
 int main(){
-    Usuario *pessoa = new Usuario("teste", "teste", "teste", "teste", 19, "M");
-    pessoa->imprimir();
+    Membros *professor = new Membros("Marcelo", "Professor", "marcelo@gmail.com", "casa", 28, 'M');
+    Membros *tecnico = new Membros("Carlos", "Tecnico", "carlos@gmail.com", "porta", 23, 'M');
+    Membros *aluno = new Membros("Alliquison", "Aluno", "alliquison@gmail.com", "matias", 19, 'M');
+
+    int i = 0;
+    cin >> i;
+    if(i == 1){
+        professor->imprimir();
+    }else if(i == 2){
+        tecnico->imprimir();
+    }else if(i == 3){
+        aluno->imprimir();
+    };
     
     return 0;
 }
