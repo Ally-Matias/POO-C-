@@ -1,21 +1,9 @@
-#include "Veiculo.cpp" 
-#include "Motor.cpp"
+#include "CarroPasseio.h"
 
-class CarroPasseio:public Veiculo, public Motor{
-    private:
-        string modelo;
-        string cor;
-    public:
-        CarroPasseio(int velMax, int peso, int preco, int cilindros, int potencia);
-
-        string getModelo();
-        void setModelo(string m);
-
-        string getCor();
-        void setCor(string c);
-
-        void print();
-};
+void CarroPasseio::print(){
+    Veiculo::print();
+    Motor::print();
+}
 
 string CarroPasseio::getModelo(){return modelo;}
 
