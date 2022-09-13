@@ -11,8 +11,8 @@ class Empresa{
         string cep;
         string telefone;
     public:
-        Empresa();
-        void Empresa::inicializa(string nome, string endereco, string cidade, string estado, string cep, string telefone); // ou int
+        Empresa(){}
+        Empresa(string nome, string endereco, string cidade, string estado, string cep, string telefone); 
 
         string getNome();
         void setNome(string n);
@@ -35,7 +35,7 @@ class Empresa{
         void print();
 };
 
-void Empresa::inicializa(string n, string e, string c, string es, string ce, string t){
+Empresa::Empresa(string n, string e, string c, string es, string ce, string t){
     nome=n;
     endereco=e;
     cidade=c;
@@ -45,12 +45,12 @@ void Empresa::inicializa(string n, string e, string c, string es, string ce, str
 };
 
 void Empresa::print(){
-    cout << "Nome: " << nome << endl;
-    cout << "Endereco: " << endereco << endl;
-    cout << "Cidade: " << cidade << endl;
-    cout << "Estado: " << estado << endl;
+    cout << "Nome da Empresa: " << nome << endl;
+    cout << "Localizada no Endereco: " << endereco << endl;
+    cout << "Cidade de: " << cidade << endl;
+    cout << "No Estado: " << estado << endl;
     cout << "CEP: " << cep << endl;
-    cout << "Telefone: " << telefone << endl;
+    cout << "Telefone para contato: " << telefone << endl;
 };
 
 string Empresa::getNome(){return nome;}
@@ -70,26 +70,3 @@ void Empresa::setCep(string ce){cep=ce;}
 
 string Empresa::getTelefone(){return telefone;}
 void Empresa::setTelefone(string t){telefone=t;}
-
-
-class Restaurante:public Empresa{
-    private:
-        string TipComida;
-        int PrecMedio;
-    public:
-        Restaurante(); // falta coisa
-        string getTipComida();
-        void setTipComida(string tc);
-
-        int getPrecMedio();
-        void setPrecMedio(int pm);
-
-        void print(); // falta coisa
-
-};
-
-string Restaurante::getTipComida(){return TipComida;}
-void Restaurante::setTipComida(string tc){TipComida=tc;}
-
-int Restaurante::getPrecMedio(){return PrecMedio;}
-void Restaurante::setPrecMedio(int pm){PrecMedio=pm;}
