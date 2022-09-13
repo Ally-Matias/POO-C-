@@ -1,28 +1,10 @@
-#include <iostream>
+#include "Veiculo.h"
 
-using namespace std;
-
-class Veiculo{
-    private:
-        int velMax;
-        int peso;
-        int preco;
-    public:
-        Veiculo();
-        void Veiculo::inicializa(int velMax, int peso, int preco);
-
-        int getVelMax();
-        void setVelMax(int vm);
-
-        int getPeso();
-        void setPeso(int p);
-
-        int getPreco();
-        void setPreco(int pr);
-
-        void print();
-
-};
+Veiculo::Veiculo(int vm, int p, int pr){
+    velMax=vm;
+    peso=p;
+    preco=pr;
+}
 
 void Veiculo::print(){
     cout << "Velocidade Maxima: " << velMax << "\n";
