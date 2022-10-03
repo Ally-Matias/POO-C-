@@ -1,5 +1,5 @@
 #pragma once
-#include "veiculo.h"
+#include "veiculo.cpp"
 
 class veiculoTerrestre: virtual public veiculo{
 protected:

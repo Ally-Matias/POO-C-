@@ -8,14 +8,12 @@ veiculoAquatico::veiculoAquatico(string nome,string marca,int numerochassi,strin
     this->qtd_pas=qtd_pas;
 }
 string veiculoAquatico::getPorte(){
-    cout << porte << endl;
     return porte;
 }
 void veiculoAquatico::setPorte(string porte){
     this->porte=porte;
 }
 int veiculoAquatico::getQtdpas(){
-    cout << qtd_pas << endl;
     return qtd_pas;
 }
 void veiculoAquatico::setQtdpas(int pas){

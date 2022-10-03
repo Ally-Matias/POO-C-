@@ -8,14 +8,12 @@ veiculoTerrestre::veiculoTerrestre(string nome,string marca,int numerochassi,int
     this->qtd_eixos=qtd_eixos;
 }
 int veiculoTerrestre::getQtdrodas(){
-    cout << qtd_rodas << endl;
     return qtd_rodas;
 }
 void veiculoTerrestre::setQtdrodas(int r){
     qtd_rodas=r;
 }
 int veiculoTerrestre::getQtdeixos(){
-    cout << qtd_eixos << endl;
     return qtd_eixos;
 }
 void veiculoTerrestre::setQtdeixos(int e){
