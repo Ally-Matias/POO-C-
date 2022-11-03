@@ -1,0 +1,70 @@
+		conteúdos para estudar em POO
+
+- Polimorfismo (muitas formas)
+- Exceções : try(tentar), throw(lançar) e catch(capturar)	
+- funções virtuais
+- classes abstratas
+- funções virtuais puras
+- conversão de tipos
+- destrutores
+- sobrecarga de operadores
+- downcasting
+- funções e classes amigas
+
+Anotações:
+
+## Polimorfismo, funções virtuais, classes abstratas, funções virtuais puras, destrutores ##
+
+- o virtual permite o polimorfismo, pois ele permite sobrescrever as funções.
+- para chamar uma função de uma classe especifica, seja pai ou filha, basta colocar assim:  classe::função();
+- os ponteiros no polimorfismo se chama vinculação dinâmica
+- parar de usar private para usar protected
+- só basta colocar virtual na classe base.
+
+- classe abstrata é uma classe que n se instancia, apenas serve como base para instanciar outras classes derivadas.
+- para se tornar abstrata, basta colocar uma função virtual pura na classe.
+- e nas classes abstratas tem as funções virtuais pura, q é poliformica mas n está implementada na classe base.
+- como definir função virtual pura: virtual double area() const=0;
+- as classes concretas derivadas devem obrigatoriamente sobrepor as funções virtuais puras da classe base.
+- destrutor virtual para ele saber quem destruir msm os outros detrutores sendo nomes diferentes. como tds apontam para a classe base, pode dar um problema quando for destruir as classes. 
+
+## Exceções : try(tentar), throw(lançar) e catch(capturar) ##
+
+- Exceções : indicação de um problema
+- exception : exceção pai de tds, ele sozinho já resolveria.
+- sempre vai cair no primeiro catch mais especifico, que acha a exceção
+- posso fazer várias coisas dentro do catch, como um código para resolver o problema ou pedir para colocar outro valor e etc.
+- overflow (maior q o esperado, estourou)
+- underflow (menor que o esperado)
+
+## sobrecarga de operadores, downcasting, funções e classes amigas ##
+
+const = só fala q n vai mudar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
