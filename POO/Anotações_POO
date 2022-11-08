@@ -1,15 +1,9 @@
 		conteúdos para estudar em POO
 
 - Polimorfismo (muitas formas)
-- Exceções : try(tentar), throw(lançar) e catch(capturar)	
-- funções virtuais
+- Exceções : try(tentar), throw(lançar) e catch(capturar)
 - classes abstratas
-- funções virtuais puras
-- conversão de tipos
-- destrutores
-- sobrecarga de operadores
 - downcasting
-- funções e classes amigas
 
 Anotações:
 
@@ -28,7 +22,21 @@ Anotações:
 - as classes concretas derivadas devem obrigatoriamente sobrepor as funções virtuais puras da classe base.
 - destrutor virtual para ele saber quem destruir msm os outros detrutores sendo nomes diferentes. como tds apontam para a classe base, pode dar um problema quando for destruir as classes. 
 
+link : https://www.geeksforgeeks.org/cpp-polymorphism/
+
 ## Exceções : try(tentar), throw(lançar) e catch(capturar) ##
+
+try : incluir uma ou mais instruções que possam lançar uma exceção.
+trow : sinaliza que uma condição excepcional – geralmente, um erro – ocorreu em um bloco try. Você pode usar um objeto de qualquer tipo como o operando de uma expressão throw. Normalmente, esse objeto é usado para passar informações sobre o erro. Na maioria dos casos, recomendamos que você use a classe std::exception ou uma das classes derivadas definidas na biblioteca padrão. 
+catch: Para tratar as exceções que podem ser lançadas, implemente um ou vários blocos catch imediatamente depois de um bloco try. Cada bloco catch especifica o tipo de exceção que ele pode tratar.
+
+em outras palavras...
+
+A instrução try permite definir um bloco de código a ser testado quanto a erros enquanto está sendo executado.
+
+A palavra-chave throw lança uma exceção quando um problema é detectado, o que nos permite criar um erro personalizado.
+
+A instrução catch permite definir um bloco de código a ser executado, se ocorrer um erro no bloco try.
 
 - Exceções : indicação de um problema
 - exception : exceção pai de tds, ele sozinho já resolveria.
@@ -37,34 +45,13 @@ Anotações:
 - overflow (maior q o esperado, estourou)
 - underflow (menor que o esperado)
 
-## sobrecarga de operadores, downcasting, funções e classes amigas ##
+## downcasting ##
+
+definição Downcasting: Na programação orientada a objetos, o downcasting ou o tipo de refinamento é o ato de lançar uma referência de uma classe base para uma das suas classes derivadas. Em muitas linguagens de programação, é possível verificar a introspecção do tipo para determinar se o tipo do objeto referenciado é, de fato, aquele que está sendo lançado ou um tipo derivado dele e, portanto, emite um erro se não for o caso. Em outras palavras, quando uma variável da classe base possui um valor da classe derivada, o downcasting é possível.
+
+definição upcasting: O upcasting está convertendo uma referência ou ponteiro de classe derivada em uma classe base. Em outras palavras, o upcasting nos permite tratar um tipo derivado como se fosse seu tipo base. É sempre permitido para herança pública , sem uma conversão de tipo explícito. Isso é resultado do relacionamento é-um entre as classes base e derivadas.  Base *ptr = &derived;
+
+link: https://youtu.be/Ebg4-2ASJ1c
 
 const = só fala q n vai mudar
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
